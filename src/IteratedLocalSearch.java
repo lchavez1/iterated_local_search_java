@@ -1,10 +1,11 @@
-import java.util.Random;
+
 
 public class IteratedLocalSearch {
 
-    static double start = -5;
+   /* static double start = -5;
     static double end = 5;
     static int maxIteration = 2000;
+
     static Perturbation perturbation = new Perturbation();
 
     public static void main(String[] args) {
@@ -44,5 +45,5 @@ public class IteratedLocalSearch {
             i++;
         }
         return s0;
-    }
+    }*/
 }

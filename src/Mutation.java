@@ -1,5 +1,3 @@
-package high_level;
-
 import java.util.Random;
 
 public interface Mutation<State> {

@@ -1,8 +1,4 @@
-package low_level.double_solution;
-
-import high_level.Accept;
-
-public class AcceptMin implements Accept<Double> {
+public class AcceptMinDouble implements Accept<Double> {
 
     @Override
     public boolean apply(Double a, Double b) {

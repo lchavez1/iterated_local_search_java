@@ -1,7 +1,3 @@
-package low_level.double_solution;
-
-import high_level.Mutation;
-
 import java.util.Random;
 
 public class Mutation_low implements Mutation<Double> {
