@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
@@ -8,6 +9,10 @@ public class Main {
     public static void main(String[] args) {
 
         Perturbation_low perturbation_low = new Perturbation_low();
+        Perturbation_med perturbation_med = new Perturbation_med();
+        ArrayList<Perturbation> ops = new ArrayList<>();
+        ops.add(perturbation_low);
+        ops.add(perturbation_med);
 
         Solution s0 = generateInitialSolution(2);
         System.out.println("Solucion inicial: \n" + s0 + "\n");
@@ -17,7 +22,7 @@ public class Main {
         Accept<Solution> solutionAcceptMax = new AcceptMaxSolution();
         LocalSearch_low localSearch_low = new LocalSearch_low();
 
-        GenericILS<Solution> algortithmSolution = new GenericILS<>(random, s0, perturbation_low, solutionAcceptMin, localSearch_low);
+        GenericILS<Solution> algortithmSolution = new GenericILS<>(random, s0, perturbation_low, ops, solutionAcceptMin, localSearch_low);
         Solution res = algortithmSolution.apply(1000);
         System.out.println(res);
 
