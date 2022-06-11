@@ -3,8 +3,6 @@ import java.util.Random;
 
 public class GenericILS<State> {
 
-    static  int maxIteration = 1000;
-
     private Random random;
     private State actual;
     private Perturbation<State> op;
