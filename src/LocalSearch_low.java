@@ -63,7 +63,7 @@ public class LocalSearch_low implements LocalSearch<Solution>{
             }
             i++;
         }
-        System.out.println(hits + " total exitos = " + exitos);
+        System.out.println(hits.get(0) + "," + hits.get(1) + "," + hits.get(2));
         return actual;
     }
 

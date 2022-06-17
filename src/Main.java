@@ -13,12 +13,14 @@ public class Main {
 
         Perturbation_low perturbation_low = new Perturbation_low();
         Perturbation_med perturbation_med = new Perturbation_med();
+        Perturbation_hig perturbation_hig = new Perturbation_hig();
         ArrayList<Perturbation> ops = new ArrayList<>();
         ops.add(perturbation_low);
         ops.add(perturbation_med);
+        ops.add(perturbation_hig);
 
-        System.out.println("Introduce valor w: ");
-        int w = scanner.nextInt();
+        //System.out.println("Introduce valor w: ");
+        int w = 100;//scanner.nextInt();
 
         Solution s0 = generateInitialSolution(2);
         System.out.println("Solucion inicial: \n" + s0 + "\n");
@@ -29,7 +31,7 @@ public class Main {
         LocalSearch_low localSearch_low = new LocalSearch_low(w);
 
         GenericILS<Solution> algortithmSolution = new GenericILS<>(random, s0, perturbation_low, ops, solutionAcceptMin, localSearch_low);
-        Solution res = algortithmSolution.apply(1000);
+        Solution res = algortithmSolution.apply(5000);
         System.out.println(res);
 
 
